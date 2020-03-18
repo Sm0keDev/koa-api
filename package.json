@@ -1,9 +1,9 @@
 {
-  "name": "koa-vue-notes-api",
+  "name": "koa-api",
   "version": "2.0.0",
-  "description": "A SPA using Koa as the backend and Vue as the frontend.",
-  "author": "John Datserakis",
-  "private": true,
+  "description": "An API boilerplate using Koa as the backend and Svelte as the frontend.",
+  "author": "Oscar Quinteros",
+  "private": false,
   "scripts": {
     "start": "NODE_ENV=development nodemon app.js --exec",
     "test": "NODE_ENV=testing jest --forceExit",
@@ -14,7 +14,7 @@
     "seed": "node -r esm src/seed/seed.js"
   },
   "license": "MIT",
-  "homepage": "https://github.com/johndatserakis/koa-vue-notes-api#readme",
+  "homepage": "https://github.com/mylastore/koa-api",
   "dependencies": {
     "@sendgrid/mail": "6.2.1",
     "axios": "^0.18.0",
