@@ -1,0 +1,94 @@
+{
+  "name": "koa-vue-notes-api",
+  "version": "2.0.0",
+  "description": "A SPA using Koa as the backend and Vue as the frontend.",
+  "author": "John Datserakis",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=development nodemon app.js --exec",
+    "test": "NODE_ENV=testing jest --forceExit",
+    "build": "NODE_ENV=production babel src -d build && npm run pretty",
+    "pretty": "prettier --write --print-width 80 --single-quote --trailing-comma es5 --tab-width 4 --no-semi 'src/**/*.js' 'tests/**/*.js'",
+    "production": "NODE_ENV=production pm2 start ecosystem.json",
+    "clean": "npm cache clean --force",
+    "seed": "node -r esm src/seed/seed.js"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/johndatserakis/koa-vue-notes-api#readme",
+  "dependencies": {
+    "@sendgrid/mail": "6.2.1",
+    "axios": "^0.18.0",
+    "bcrypt": "^2.0.1",
+    "crypto": "^1.0.1",
+    "date-fns": "^1.29.0",
+    "dotenv": "^6.0.0",
+    "esm": "^3.2.25",
+    "express-session": "^1.17.0",
+    "faker": "^4.1.0",
+    "fs-extra": "^6.0.1",
+    "ioredis": "^3.2.2",
+    "jest": "^23.1.0",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.2.2",
+    "kcors": "^2.2.1",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-hbs": "^0.9.0",
+    "koa-helmet": "^5.2.0",
+    "koa-json-error": "^3.1.2",
+    "koa-ratelimit": "^4.1.1",
+    "koa-router": "^7.4.0",
+    "koa-useragent": "^1.1.0",
+    "log4js": "^6.1.2",
+    "mongoose": "^5.9.3",
+    "mongoose-unique-validator": "^2.0.3",
+    "nodemailer": "^6.4.4",
+    "nodemailer-express-handlebars": "^3.1.0",
+    "npm": "^6.1.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pm2": "^2.10.4",
+    "randexp": "^0.4.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "cross-env": "^6.0.0",
+    "nodemon": "^1.17.5",
+    "prettier": "^1.13.4"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "safari >= 7"
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "keywords": [
+    "koa",
+    "koa2",
+    "api",
+    "boilerplate",
+    "svelte",
+    "spa",
+    "backend",
+    "jwt",
+    "pm2",
+    "mongodb",
+    "mongoose"
+  ],
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
