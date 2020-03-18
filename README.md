@@ -8,10 +8,10 @@
 
 # Koa-API
 
-This is a starter boilerplate inspired by [koa-vue-notes-api](https://github.com/johndatserakis/koa-vue-notes-api) and the famous [hackathon-stater](https://github.com/sahat/hackathon-starter) built using [Koa](http://koajs.com/) (2.5.1) as the backend and [Svelte](https://svelte.dev/) (3.17.1) as the frontend. Click [here](https://github.com/johndatserakis/koa-vue-notes-web) to see the frontend svelte.js on github. I choose Koa and Svelte both for speed. 
+This is a starter boilerplate inspired by [koa-vue-notes-api](https://github.com/johndatserakis/koa-vue-notes-api) and the famous [hackathon-stater](https://github.com/sahat/hackathon-starter) built using [Koa](http://koajs.com/) (2.5.1) as the backend and [Svelte](https://svelte.dev/) (3.17.1) as the frontend. Click [here](https://github.com/mylastore/svelte-parcel) to see the frontend svelte.js on github. I choose Koa and Svelte both for speed. 
 
 ## Example live app
-Click [here](https://koa-vue-notes-web.innermonkdesign.com/) to view the app live. 
+Click [here](https://mylastore.com/) to view the app live. 
 
 ## Features
 - Koa 2.5.1
