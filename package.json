@@ -10,6 +10,7 @@
     "build": "NODE_ENV=production babel src -d build && npm run pretty",
     "pretty": "prettier --write --print-width 80 --single-quote --trailing-comma es5 --tab-width 4 --no-semi 'src/**/*.js' 'tests/**/*.js'",
     "production": "NODE_ENV=production pm2 start ecosystem.json",
+    "live": "NODE_ENV=production node app.js",
     "clean": "npm cache clean --force",
     "seed": "node -r esm src/seed/seed.js"
   },
@@ -52,6 +53,9 @@
     "randexp": "^0.4.9"
   },
   "devDependencies": {
+    "@node-minify/babel-minify": "^5.3.0",
+    "@node-minify/core": "^5.3.0",
+    "@node-minify/uglify-js": "^5.3.0",
     "babel-cli": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",

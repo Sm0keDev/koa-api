@@ -33,6 +33,7 @@ class UserController {
                 // to see if we send the new user email
                 // this is store in data/settings directory
                 _data.read('settings', settingId, function(err, checkData) {
+                    console.log('read settings ', err)
                     if (
                         !err &&
                         checkData &&

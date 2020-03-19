@@ -12,10 +12,11 @@ var utils = require('./utils')
 var lib = {}
 
 // Base directory of data folder
-lib.baseDir = path.join(__dirname, './../.data/')
+lib.baseDir = path.join(__dirname, '../../.data/')
 
 // Write data to a file
 lib.create = function(dir, file, data, callback) {
+    console.log('create ', lib.baseDir)
     // Open the file for writing
     fs.open(lib.baseDir + dir + '/' + file + '.json', 'wx', function(
         err,
@@ -46,6 +47,8 @@ lib.create = function(dir, file, data, callback) {
 
 // Read data from a file
 lib.read = function(dir, file, callback) {
+    console.log('dir ', dir)
+    console.log('lib.baseDir ', lib.baseDir)
     fs.readFile(lib.baseDir + dir + '/' + file + '.json', 'utf8', function(
         err,
         data

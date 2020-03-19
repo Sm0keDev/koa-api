@@ -35,21 +35,21 @@ const app = new Koa()
 app.use(helmet())
 
 //Here's the rate limiter
-app.use(
-    ratelimit({
-        db: new redis(),
-        duration: 60000,
-        errorMessage:
-            "Hmm, you seem to be doing that a bit too much - wouldn't you say?",
-        id: ctx => ctx.ip,
-        headers: {
-            remaining: 'Rate-Limit-Remaining',
-            reset: 'Rate-Limit-Reset',
-            total: 'Rate-Limit-Total',
-        },
-        max: 100,
-    })
-)
+// app.use(
+//     ratelimit({
+//         db: new redis(),
+//         duration: 60000,
+//         errorMessage:
+//             "Hmm, you seem to be doing that a bit too much - wouldn't you say?",
+//         id: ctx => ctx.ip,
+//         headers: {
+//             remaining: 'Rate-Limit-Remaining',
+//             reset: 'Rate-Limit-Reset',
+//             total: 'Rate-Limit-Total',
+//         },
+//         max: 100,
+//     })
+// )
 
 app.use(
     hbs.middleware({

@@ -15,7 +15,7 @@ const app = require(src).default;
 //we're going to want to manually rip down the server in testing
 const server = app.listen(port);
 console.log('http://localhost:' + port);
-console.log("Running in "  + process.env.NODE_ENV + " v" + process.env.npm_package_version);
+console.log("Running in "  + process.env.NODE_ENV + " v" + process.env.NPM_PACKAGE_VERSION);
 
 //Exporting the actual server here for testing availability
 module.exports = {server: server}
